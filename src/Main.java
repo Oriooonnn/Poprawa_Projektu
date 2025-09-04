@@ -11,7 +11,7 @@ public class Main {
         System.out.println("3. Utworz nowa playliste");
         System.out.println("4. Dodaj utwor do playlisty");
         System.out.println("5. Wyswietl dostepne playlisty");
-        System.out.println("6. Odtworz wybrany utwor");
+        System.out.println("6. Odtworz wybrany utwor.");
         System.out.println("Wybierz opcje.");
         opcja = scanner.nextInt();
         scanner.nextLine();
