@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Biblioteka {
+    //Ponowna deklaracja zbiorow piosenek i tym razem jeszcze playlist
     private ArrayList<Piosenka> piosenki = new ArrayList<>();
     private ArrayList<Playlista> playlisty = new ArrayList<>();
 
@@ -8,7 +9,7 @@ public class Biblioteka {
         piosenki.add(p);
 
     }
-
+    //Metoda wyswietlPiosenki ktora pierw sprawdza czy lista piosenki jest pusta nastepnie petla for ograniczona o rozmiar listy wyswietla podane piosenki
     public void wyswietlPiosenki() {
         if (piosenki.isEmpty()) {
             System.out.println("Brak piosenek do wyświetlenia");
