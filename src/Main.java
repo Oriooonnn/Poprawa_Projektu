@@ -3,7 +3,7 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static Biblioteka biblioteka = new Biblioteka();
     public static void main(String[] args) {
-
+    //Ponizej Program wyswietla uzytkownikowi opcje do wyboru.
         int opcja;
         do {
             System.out.println("==MENU GLOWNE SYMULATORA APLIKACJI SPOTIFY==");
@@ -16,7 +16,7 @@ public class Main {
             System.out.println("Wybierz opcje.");
             opcja = scanner.nextInt();
             scanner.nextLine();
-
+            //logika wyborow
             switch (opcja) {
                 case 1:
                     DodajPiosenke();
@@ -45,6 +45,8 @@ public class Main {
             }
         } while (opcja != 0);
     }
+    //Metoda dodaj piosenke, ktora pobiera od uzytkownika tytul za pomoca scannera, wykonuje to samo z nazwa wykonawcy
+    //nastepnie tworzy nowy obiekt piosenka i wykonuje biblioteka.dodajPiosenke(p)
     private static void DodajPiosenke(){
         System.out.println("Podaj tytuł piosenki:");
         String tytul = scanner.nextLine();
@@ -54,11 +56,13 @@ public class Main {
         biblioteka.dodajPiosenke(p);
         System.out.println("Dodano piosenke " + p);
     }
+    //Metoda UtworzPlayliste dzialajaca na podobnej zasadzie jak metoda DodajPiosenke()
     private static void UtworzPlayliste() {
         System.out.println("Podaj nazwę playlisty:");
         String nazwa = scanner.nextLine();
         biblioteka.utworzPlayliste(nazwa);
     }
+    //Metoda odwtworzPiosenke rozni sie tym ze ma dodana logike sprawdzania czy numer takiej piosenki (indeks) jest dodany jesli nie program napisze nie ma takiej piosenki
     private static void odtworzPiosenke(){
         System.out.println("Proszę podac numer piosenki");
         int numer = scanner.nextInt();
