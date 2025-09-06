@@ -7,7 +7,7 @@ public class Main {
         int opcja;
         do {
             System.out.println("==MENU GLOWNE SYMULATORA APLIKACJI SPOTIFY==");
-            System.out.println("1. Dodaj nowa piosenke.");
+            System.out.println("1. Dodaj nowa piosenke");
             System.out.println("2. Wyswietl dostepne utwory.");
             System.out.println("3. Utworz nowa playliste.");
             System.out.println("4. Dodaj utwor do playlisty.");
