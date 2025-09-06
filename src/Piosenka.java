@@ -1,7 +1,8 @@
+//Wczesniej wspomniane dziedziczenie po klasie Media
 class Piosenka extends Media {
     private String wykonawca;
     public Piosenka(String tytul, String wykonawca){
-        super(tytul);
+        super(tytul); //Wykorzystanie super aby odwolac sie do klasy Media
         this.wykonawca = wykonawca;
     }
 
