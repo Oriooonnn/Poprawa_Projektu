@@ -54,7 +54,7 @@ public class Main {
                     biblioteka.edytujPiosenke(indeks -1,nowyTytul,nowyWykonawca,nowyGatunek);
                     break;
                 default:
-                    System.out.println("Proszę wybrać prawidłową opcje");
+                    System.out.println("Proszę wybrać prawidłową opcje.");
             }
         } while (opcja != 0);
     }
