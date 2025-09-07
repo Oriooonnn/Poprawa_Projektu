@@ -31,7 +31,7 @@ public class Biblioteka {
     }
     public void dodajPiosenkeDoPlaylisty(String nazwa, int indeks){
         for(Playlista p: playlisty){
-            if(p.getNazwa().equalsIgnoreCase(nazwa)){
+            if(p.getNazwa().equals(nazwa)){
                 Piosenka song = getPiosenka(indeks);
                 if(song != null){
                     p.dodajPiosenke(song);
@@ -51,7 +51,30 @@ public class Biblioteka {
             for(Playlista p: playlisty){
                 p.wyswietl();
             }
+
+        }
+
+    }public void usunPiosenke(int indeks){
+        if(indeks >=0 && indeks < piosenki.size()){
+            Piosenka usunieta = piosenki.remove(indeks);
+            System.out.println("Usunieto " + usunieta);
+        }else {
+            System.out.println("Nie ma takiej piosenki");
+        }
+
+    }
+    public void edytujPiosenke(int indeks, String nowyTytul, String nowyWykonawca, String nowyGatunek){
+        if(indeks >=0 && indeks<piosenki.size()){
+            Piosenka p =piosenki.get(indeks);
+            p.setTytul(nowyTytul);
+            p.setWykonawca(nowyWykonawca);
+            p.setGatunek(nowyGatunek);
+            System.out.println("Zmiany zostaly zapisane");
+
+        }else {
+            System.out.println("Nie ma takiej piosenki");
         }
     }
 }
+
 

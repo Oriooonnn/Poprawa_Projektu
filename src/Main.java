@@ -13,6 +13,7 @@ public class Main {
             System.out.println("4. Dodaj utwor do playlisty.");
             System.out.println("5. Wyswietl dostepne playlisty.");
             System.out.println("6. Odtworz wybrany utwor.");
+            System.out.println("7. Edytuj Piosenke.");
             System.out.println("Wybierz opcje.");
             opcja = scanner.nextInt();
             scanner.nextLine();
@@ -40,6 +41,18 @@ public class Main {
                 case 6:
                     odtworzPiosenke();
                     break;
+                case 7:
+                    System.out.println("Wybierz indeks piosenki do edycji");
+                    int indeks = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Podaj nowy tytul");
+                    String nowyTytul = scanner.nextLine();
+                    System.out.println("Podaj nowego wykonawce");
+                    String nowyWykonawca = scanner.nextLine();
+                    System.out.println("Podaj nowy gatunek");
+                    String nowyGatunek = scanner.nextLine();
+                    biblioteka.edytujPiosenke(indeks -1,nowyTytul,nowyWykonawca,nowyGatunek);
+                    break;
                 default:
                     System.out.println("Proszę wybrać prawidłową opcje");
             }
@@ -50,7 +63,9 @@ public class Main {
         String tytul = scanner.nextLine();
         System.out.println("Podaj wykonawce:");
         String wykonawca = scanner.nextLine();
-        Piosenka p = new Piosenka(tytul,wykonawca);
+        System.out.println("Podaj gatunek muzyczny");
+        String gatunek = scanner.nextLine();
+        Piosenka p = new Piosenka(tytul,wykonawca,gatunek);
         biblioteka.dodajPiosenke(p);
         System.out.println("Dodano piosenke " + p);
         }
@@ -69,4 +84,9 @@ public class Main {
         }else{
             System.out.println("Nie ma takiej piosenki");
         }
+        }
+        private static void usunPiosenke(){
+        System.out.println("Podaj numer piosenki do usuniecia");
+        int numer = Integer.parseInt(scanner.nextLine());
+        biblioteka.usunPiosenke(numer -1);
         }}
