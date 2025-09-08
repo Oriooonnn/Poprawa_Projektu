@@ -53,7 +53,7 @@ public class Biblioteka {
             }
 
         }
-
+    //metoda sprawdzajaca czy numer piosenki znajduje sie w zapisanych piosenkach, jesli tak metoda usuwa podana pozycje
     }public void usunPiosenke(int indeks){
         if(indeks >=0 && indeks < piosenki.size()){
             Piosenka usunieta = piosenki.remove(indeks);

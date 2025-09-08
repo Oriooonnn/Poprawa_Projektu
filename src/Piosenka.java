@@ -1,4 +1,5 @@
  class Piosenka extends Media {
+    //Deklaracja tablicy gatunkow(potrzebne do przeciazania konstruktora)
      private static final String[] GATUNKI = {"rock", "pop", "metal", "inne"};
      private String wykonawca;
      private String gatunek;

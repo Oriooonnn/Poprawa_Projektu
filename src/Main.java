@@ -3,7 +3,7 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     private static Biblioteka biblioteka = new Biblioteka();
     public static void main(String[] args) {
-
+        //Wyswietlanie menu wyboru uzytkownika
         int opcja;
         do {
             System.out.println("==MENU GLOWNE SYMULATORA APLIKACJI SPOTIFY==");
@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Wybierz opcje.");
             opcja = scanner.nextInt();
             scanner.nextLine();
-
+            //logika wyborow za pomoca switch i case oraz wywolanie poszczegolnych metod
             switch (opcja) {
                 case 1:
                     DodajPiosenke();
@@ -69,6 +69,7 @@ public class Main {
         biblioteka.dodajPiosenke(p);
         System.out.println("Dodano piosenke " + p);
         }
+
         private static void UtworzPlayliste() {
             System.out.println("Podaj nazwę playlisty:");
             String nazwa = scanner.nextLine();
